@@ -11,7 +11,6 @@ namespace Lab18
         public Node Head { set; get; }
         public Node Tail { set; get; }
         public int Count { set; get; }
-
         public void Add(string userInput)
         {
             Node newNode = new Node { Next = null, Data = userInput };
@@ -44,8 +43,9 @@ namespace Lab18
             {
                 Console.WriteLine(GetNode(i).Data);
             }
+            Console.WriteLine($"Head: {Head.Data}, Tail: {Tail.Data}");
+            Console.WriteLine();
         }
-
         public void PrintReverse()
         {
             for (int i = Count - 1; i > -1; i--)
@@ -66,7 +66,12 @@ namespace Lab18
                 {
                     Node previousNode = GetNode(index - 1);
                     previousNode.Next = node.Next;
+                    if (node == Tail)
+                    {
+                        Tail = previousNode;
+                    }
                 }
+                Count--;
             }
             catch (Exception)
             {
@@ -96,6 +101,7 @@ namespace Lab18
                     n.Next = tempNode;
                     previousNode.Next = n;
                 }
+                Count++;
             }
             catch (Exception)
             {

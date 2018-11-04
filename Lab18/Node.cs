@@ -13,5 +13,15 @@ namespace Lab18
             set; get;
         }
         public Node Next { set; get; }
+
+        public Node(string data, Node next)
+        {
+            Data = data;
+            Next = next;
+        }
+        public Node()
+        {
+
+        }
     }
 }
