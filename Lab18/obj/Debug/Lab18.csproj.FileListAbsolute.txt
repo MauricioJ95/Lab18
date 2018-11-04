@@ -1,0 +1,7 @@
+C:\git\ClassLab\Lab18\Lab18\Lab18\obj\Debug\Lab18.csprojAssemblyReference.cache
+C:\git\ClassLab\Lab18\Lab18\Lab18\obj\Debug\Lab18.csproj.CoreCompileInputs.cache
+C:\git\ClassLab\Lab18\Lab18\Lab18\bin\Debug\Lab18.exe.config
+C:\git\ClassLab\Lab18\Lab18\Lab18\bin\Debug\Lab18.exe
+C:\git\ClassLab\Lab18\Lab18\Lab18\bin\Debug\Lab18.pdb
+C:\git\ClassLab\Lab18\Lab18\Lab18\obj\Debug\Lab18.exe
+C:\git\ClassLab\Lab18\Lab18\Lab18\obj\Debug\Lab18.pdb
