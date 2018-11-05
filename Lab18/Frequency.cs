@@ -9,24 +9,30 @@ namespace Lab18
     class Frequency
     {
         Dictionary<int, int> Items { get; set; }
-        public int[] num { get; set; }
-        public int[] count { get; set; }
+        public int[] Num { get; set; }
+        public int[] Count { get; set; }
+
+        public Frequency(int[] num)
+        {
+            Num = num;
+            Items = new Dictionary<int, int>();
+        }
 
         public Frequency()
         {
-            num = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10 };
-            count = new int[num.Max() + 1];
+            Num = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10 };
+            Count = new int[Num.Max() + 1];
         }
         public void CountNum()
         {
-            for (int i = 0; i < num.Length; i++)
+            for (int i = 0; i < Num.Length; i++)
             {
-                count[num[i]]++;
+                Count[Num[i]]++;
             }
         }
         public void CountNumWithDictionary()
         {
-            foreach (var item in num)
+            foreach (var item in Num)
             {
                 if (Items.ContainsKey(item))
                 {
@@ -47,11 +53,11 @@ namespace Lab18
         }
         public void DisplayFromArray()
         {
-            for(int i = 0; i < count.Length; i++)
+            for(int i = 0; i < Count.Length; i++)
             {
-                if (count[i] > 0)
+                if (Count[i] > 0)
                 {
-                    Console.WriteLine($"{i}: {count[i]}");
+                    Console.WriteLine($"{i}: {Count[i]}");
                 }
             }
         }
