@@ -12,16 +12,11 @@ namespace Lab18
         public int[] Num { get; set; }
         public int[] Count { get; set; }
 
-        public Frequency(int[] num)
-        {
-            Num = num;
-            Items = new Dictionary<int, int>();
-        }
-
         public Frequency()
         {
             Num = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10 };
             Count = new int[Num.Max() + 1];
+            Items = new Dictionary<int, int>();
         }
         public void CountNum()
         {
