@@ -42,7 +42,7 @@ namespace Lab18
         {
             foreach (var item in Items)
             {
-                Console.WriteLine($"{item.Key} = {item.Value}");
+                Console.WriteLine($"{item.Key}: {item.Value}");
             }
         }
         public void DisplayFromArray()
@@ -51,7 +51,7 @@ namespace Lab18
             {
                 if (count[i] > 0)
                 {
-                    Console.WriteLine($"{i} = {count[i]}");
+                    Console.WriteLine($"{i}: {count[i]}");
                 }
             }
         }

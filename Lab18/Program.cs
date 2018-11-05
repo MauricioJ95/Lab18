@@ -40,6 +40,10 @@ namespace Lab18
 
             var f = new Frequency();
 
+            f.CountNum();
+
+            f.CountNumWithDictionary();
+
             f.DisplayFromArray();
 
             f.DisplayFromDictionary();
