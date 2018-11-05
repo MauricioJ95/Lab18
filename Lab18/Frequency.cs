@@ -41,7 +41,7 @@ namespace Lab18
         } 
         public void DisplayFromDictionary()
         {
-            foreach (var item in Items)
+            foreach (var item in Items.OrderBy(i => i.Key))
             {
                 Console.WriteLine($"{item.Key}: {item.Value}");
             }
