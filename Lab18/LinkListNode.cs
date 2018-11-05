@@ -16,18 +16,19 @@ namespace Lab18
             Node newNode = new Node { Next = null, Data = userInput };
             if (Count == 0)
             {
-                Head = newNode;
+                Head = newNode;//if we only have 1 node it will be head and tail.
                 Tail = newNode;
             }
             else
             {
-                Tail.Next = newNode;
+                Tail.Next = newNode;//this is saying if we have 2 nodes and we add a 3rd node the 3rd node becomes the tail
                 Tail = newNode;
             }
             Count++;
         }
         public Node GetNode(int index)
         {
+            //give how many nodes you want then go through the nodes stop once you hit the final index
             int start = 0;
             Node temp = Head;
             while (start != index)
@@ -39,6 +40,7 @@ namespace Lab18
         }
         public void PrintList()
         {
+            //print the nodes out
             for (int i = 0; i < Count; i++)
             {
                 Console.WriteLine(GetNode(i).Data);
@@ -48,6 +50,7 @@ namespace Lab18
         }
         public void PrintReverse()
         {
+            //print the nodes reversed
             for (int i = Count - 1; i > -1; i--)
             {
                 Console.WriteLine(GetNode(i).Data);
@@ -55,6 +58,7 @@ namespace Lab18
         }
         public bool RemoveAt(int index)
         {
+            //Remove nodes at index you asked to remove
             try
             {
                 Node node = GetNode(index);
@@ -81,6 +85,7 @@ namespace Lab18
         }
         public bool InsertAt(int index, Node n)
         {
+            //insert node at where it want it in.
             try
             {
                 Node tempNode = GetNode(index);

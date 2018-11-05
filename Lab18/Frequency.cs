@@ -15,14 +15,14 @@ namespace Lab18
         public Frequency()
         {
             Num = new[] { 1, 2, 3, 2, 2, 4, 5, 5, 7, 8, 4, 4, 1, 0, 10 };
-            Count = new int[Num.Max() + 1];
-            Items = new Dictionary<int, int>();
+            Count = new int[Num.Max() + 1];//counting the digits and increaseing by 1 in the index
+            Items = new Dictionary<int, int>();//instantiating my dictionary
         }
         public void CountNum()
         {
             for (int i = 0; i < Num.Length; i++)
             {
-                Count[Num[i]]++;
+                Count[Num[i]]++;//counting the numbers in the array
             }
         }
         public void CountNumWithDictionary()
@@ -31,20 +31,24 @@ namespace Lab18
             {
                 if (Items.ContainsKey(item))
                 {
-                    Items[item]++;
+                    Items[item]++;//if we find a number that comes up more than once we increase how many times it came up
                 }
                 else
                 {
-                    Items.Add(item, 1);
+                    Items.Add(item, 1);//if a new number comes in we count 1
                 }
             }
         } 
         public void DisplayFromDictionary()
         {
-            foreach (var item in Items)
+            foreach (var item in Items.OrderBy(i => i.Key))
             {
+                /*display number then display how many times it came up.
+                 Displaying from the Dictionary
+                 */
                 Console.WriteLine($"{item.Key}: {item.Value}");
             }
+            Console.WriteLine();
         }
         public void DisplayFromArray()
         {
@@ -52,9 +56,13 @@ namespace Lab18
             {
                 if (Count[i] > 0)
                 {
-                    Console.WriteLine($"{i}: {Count[i]}");
+                    /*display from the array
+                     *display number and how many times it came up
+                     */
+                    Console.WriteLine($"{i}: {Count[i]}");//
                 }
             }
+            Console.WriteLine();
         }
     }
 }

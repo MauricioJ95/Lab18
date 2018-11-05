@@ -12,32 +12,35 @@ namespace Lab18
         {
             LinkListNode l = new LinkListNode();
 
+            //values for my linked list
             l.Add("Dave");
             l.Add("Shark");
             l.Add("Coco");
             l.Add("Sylvia");
             l.Add("Mama");
 
+            //prints list
             l.PrintList();
-
-            //l.PrintReverse();
 
             Console.ReadKey();
 
+            //insert at index 2
             l.InsertAt(2, new Node("Grandpa", null));
-
+            //print
             l.PrintList();
+            //print in reverse
             l.PrintReverse();
 
             Console.ReadKey();
-
+            //Remove at index 2
             l.RemoveAt(2);
-
+            //print
             l.PrintList();
+            //print in reverse
             l.PrintReverse();
 
             Console.ReadKey();
-
+            //calling my constructors
             var f = new Frequency();
 
             f.CountNum();
